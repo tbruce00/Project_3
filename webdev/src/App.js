@@ -1,10 +1,11 @@
 import Profile from './components/Profile';
 import './App.css';
-// import signUp from './components/SignUp';
+import Jumbotron from './components/Jumbotron';
 
 function App() {
   return (
     <div className="App">
+      <Jumbotron />
       <Profile
       />
       
