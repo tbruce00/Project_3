@@ -8,6 +8,9 @@ const profileSchema = new Schema({
     required: true,
     trim: true,
   },
+  description: {
+    type: String,
+  }
 
 });
 
