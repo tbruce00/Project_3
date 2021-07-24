@@ -1,0 +1,10 @@
+.profileContainer {
+    width: 200px;
+    
+    
+    
+    background-image: url("../Jumbotron/images/testimg3.jpg");
+    background-position: center;
+    padding: 1rem;
+    margin: 1rem;
+}
