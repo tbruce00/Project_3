@@ -37,7 +37,7 @@ function App() {
     <Router>
     <div className="App">
     <Navbar />
-      <Jumbotron />
+      {/* <Jumbotron /> */}
       <Profile
       
   

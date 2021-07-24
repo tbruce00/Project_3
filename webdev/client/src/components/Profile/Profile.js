@@ -8,16 +8,16 @@ import Typography from '@material-ui/core/Typography';
 import './Profile.css';
 import { useQuery } from '@apollo/client';
 
-function Profile() {
-  const { data } = useQuery(Query_USER);
-  let user;
+// function Profile() {
+//   // const { data } = useQuery(Query_USER);
+//   let user;
 
-  if(data) {
-    user = data.user;
-  }
+//   if(data) {
+//     user = data.user;
+//   }
 
 
-// export default function Profile() {
+export default function Profile() {
   
 
   return (
@@ -28,11 +28,11 @@ function Profile() {
         
         <Typography variant="h5" component="h2">
           Programmer Name:
-          {user.firstName} {user.lastName}
+          {/* {user.firstName} {user.lastName} */}
         </Typography>
         <Typography  color="textSecondary">
           Programmer city here:
-          {user.location}
+          {/* {user.location} */}
         </Typography>
       </CardContent>
       
@@ -40,6 +40,5 @@ function Profile() {
       </CardActions>
     </Card>
   );
-}
+  }
 
-export default Profile;
