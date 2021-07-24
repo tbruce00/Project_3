@@ -1,17 +1,26 @@
 const db = require('./connection');
-const { User, Profile } = require ('../models');
+const { User, Profile } = require('../models');
 
 db.once('open', async () => {
-    await Profile.deletemany();
 
-    const profiles = await Profile.insertMany([
-        {  name: 'Andreas'},
-        {  name: 'Brett' },
-        {  name: 'Dingle' },
-    ]);
-    console.log("Profiles have been seeded");
+    const Profile = await Profile.insertMany([
+        {
+            name: 'Ian Preston',
+            description: 'Professional web developer'
+        }
+    ])
+    await User.create({
+        firstname: 'Steven',
+        lastname: 'John',
+        email:'steven@email.com',
+        password: '123456'
+    })
 
-    await Profile.deletemany();
 
-    const profiles =
+    await User.create({
+        firstname: 'Stanley',
+        lastname: 'Watt',
+        email:'stanley@email.com',
+        password: '123456'
+    })
 })

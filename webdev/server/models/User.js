@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const firebase = require('firebase');
 
-const { Schema } = mongoose;
+const { Schema } = firebase;
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
@@ -42,6 +42,6 @@ userSchema.methods.isCorrectPassword = async function (password) {
   await bcrypt.compare(password, this.password);
 };
 
-const User = mongoose.model('User', userSchema);
+const User = firebase.model('User', userSchema);
 
 module.exports = User;
