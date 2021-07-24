@@ -10,7 +10,7 @@ import { setContext } from '@apollo/client/link/context';
 import Profile from './components/Profile/Profile';
 import './App.css';
 import Navbar from './components/Nav/navbar'
-// import signUp from './components/SignUp';
+import Jumbotron from './components/Jumbotron/Jumbotron';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -37,7 +37,7 @@ function App() {
     <Router>
     <div className="App">
     <Navbar />
-      {/* <Jumbotron /> */}
+      <Jumbotron />
       <Profile
       
   
