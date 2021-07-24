@@ -8,9 +8,21 @@ const profileSchema = new Schema({
     required: true,
     trim: true,
   },
-  description: {
+  bio: {
     type: String,
+  },
+  location: {
+    type: String,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  link: {
+    type: String
   }
+
 
 });
 
