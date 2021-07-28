@@ -23,4 +23,9 @@ db.once('open', async () => {
         email:'stanley@email.com',
         password: '123456'
     })
+
+    await Comments.create({
+        name: 'Zach',
+        comment: 'Hi I like your profile'
+    })
 })
