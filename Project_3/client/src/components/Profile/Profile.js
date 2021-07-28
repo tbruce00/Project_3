@@ -10,13 +10,12 @@ import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../../utils/queries';
 
 function Profile() {
-  const { data } = useQuery(QUERY_USER);
-  let user;
+  // const { data } = useQuery(QUERY_USER);
+  // let user;
 
-  if(data) {
-    user = data.user;
-  }
-  
+  // if(data) {
+  //   user = data.user;
+  // }
 
   return (
     <Card className="profileContainer" variant="outlined">

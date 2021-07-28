@@ -31,3 +31,5 @@ class Comments extends React.Component {
                 this.setState({comment: event.target.value})
             }
 }
+
+export default Comments

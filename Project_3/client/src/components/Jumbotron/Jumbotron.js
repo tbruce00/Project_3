@@ -9,12 +9,11 @@ const Jumbotron = () => {
       <p className="jumbotronText" >
       This is a platform for viewing or creating WebDev profiles. 
        
-      <button class="button"><span>Create Profile </span></button>
+      <button type='submit' class="button"><span>Create Profile </span></button>
       </p>
       <p className="jumbotronText">
       Browse Web Devs for your next job, or add your name to the list for future employers to see!
       </p>
-      
     </div>
   </div>
    

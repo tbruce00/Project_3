@@ -18,10 +18,10 @@ function Footer() {
         <div className= "footer">
             <div className="container text-center">
             <div>
-                <a className="footerIcons" href={profile.linkedIn} target="_blank">
+                <a className="footerIcons" href={`"${profile.linkedIn}"`} target="_blank">
                     <GrLinkedinOption />
                 </a>
-                <a className="footerIcons" href={profile.gitHub} target="_blank">
+                <a className="footerIcons" href={`"${profile.gitHub}"`} target="_blank">
                     <GrGithub />
                 </a>
             </div>    

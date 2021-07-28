@@ -11,6 +11,11 @@
     padding: 10px 30px;
 }
 
+.navTitle {
+    text-decoration: none;
+    font-weight: 500;
+}
+
 h1 {
     size: 35px;
     display: flex;
@@ -20,8 +25,7 @@ h1 {
     float: left;
 }
 
-
-.navLinks {
+.navBar .navLinks {
     display: flex;
     align-items: center;
     font-weight: 500;

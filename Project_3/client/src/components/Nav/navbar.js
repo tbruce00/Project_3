@@ -7,6 +7,7 @@ import './navbar.css';
 function Navbar() {
 
 function showNavigation() {
+    //replace with firebase authentication
     if (Auth.loggedIn()) {
         return (
             <ul className="flex-row">
