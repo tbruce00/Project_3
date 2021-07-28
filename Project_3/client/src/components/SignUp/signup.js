@@ -13,12 +13,24 @@ function SignUp(props) {
           method: "POST",
           headers: headers,
           body: JSON.stringify({
-            query: "query { viewer { name email location login url websiteUrl bio avatarUrl} }"
+            query: "query { viewer { name email location websiteUrl bio avatarUrl} }"
           })
         };
         return fetch(url, options).then(function(response) {
-          return response.json();
+            // creates a current user object to retrieve user ID from firebase.
+            const user = firebase.auth().currentUser;
+            return response.json().then(function(json) {
+                return {
+                    _id: user.uid,
+                    name: json.data.viewer.name,
+                    email: json.data.viewer.email,
+                    bio: json.data.viewer.bio,
+                    location: json.data.viewer.location,
+                    avatarUrl: json.data.viewer.avatarUrl,
+                    websiteUrl: json.data.viewer.websiteUrl
+                };
       });
+        });
     }
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -26,7 +38,12 @@ function SignUp(props) {
         firebase.auth().signInWithPopup(provider).then(function(result) {
             // This gives you a GitHub Access Token. You can use it to access the GitHub API.
             const token = result.credential.accessToken;
-            console.log(getUserInfo(token));
+            // requests the user info from github using the access token
+            getUserInfo(token).then(function(userInfo) {
+                // TO DO: Replace console.log of userInfo with database write
+                // access userInfo fields with .name, .email etc.
+                console.log(userInfo);
+            });
           });
         };
     return (
