@@ -3,7 +3,7 @@ const { User, Profile, Comments } = require('../models');
 
 db.once('open', async () => {
 
-    const Profile = await Profile.insertMany([
+    const profile = await Profile.insertMany([
         {
             name: 'Ian Preston',
             description: 'Professional web developer'
