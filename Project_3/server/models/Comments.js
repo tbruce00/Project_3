@@ -3,14 +3,13 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const commentsSchema = new Schema({
-  name: {
+
+  Name: {
     type: String,
-    required: true,
-    trim: true,
   },
-  comment:{
-      type: String
-  }
+  Comment: {
+    type: String,
+  },
 
 
 });

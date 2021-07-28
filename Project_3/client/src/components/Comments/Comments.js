@@ -8,7 +8,7 @@ class Comments extends React.Component {
             comment: '',
         };
 
-    } 
+    }
 
     render() {
         return (
@@ -21,15 +21,16 @@ class Comments extends React.Component {
                     <label htmlFor="comment">Post what you love about this developer</label>
                     <input type="comment" className="form-control" id="comment" aria-describedby="commentHelp" value={this.state.email} onChange={this.onCommentChange.bind(this)} />
                 </div>
-                </form>
-                
-            )}
-            onNameChange(event) {
-                this.setState({name: event.target.value})
-            }
-            onCommentChange(event) {
-                this.setState({comment: event.target.value})
-            }
+            </form>
+
+        )
+    }
+    onNameChange(event) {
+        this.setState({ name: event.target.value })
+    }
+    onCommentChange(event) {
+        this.setState({ comment: event.target.value })
+    }
 }
 
-export default Comments
+export default Comments;

@@ -6,30 +6,29 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PROFILE } from '../../utils/queries';
 
 
+
 function MyProfile() {
   const { data } = useQuery(QUERY_PROFILE);
   let profile;
 
-  if(data) {
+  if (data) {
     profile = data.profile;
   }
 
-    return (
-        <div className="container">
-            <div className="myProfile">
-            <h1 className="profileHeader">{profile.name}</h1>
-            <div>
-            <p className="profileBio">{profile.bio}</p>
-            </div>
-            <span>{MdPlace}</span>
-            {profile.location}
-            </div>
-            <Contact />
-            <br />
-            <br />
-            <Comments />
+  return (
+    <div className="container">
+      <div className="myProfile">
+        <h1 className="profileHeader">{profile.name}</h1>
+        <div>
+          <p className="profileBio">{profile.bio}</p>
         </div>
-    )
+        <span>{MdPlace}</span>
+        {profile.location}
+      </div>
+      <Contact />
+      <Comments />
+    </div>
+  )
 }
 
 export default MyProfile;
