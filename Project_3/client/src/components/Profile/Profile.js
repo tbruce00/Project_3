@@ -7,17 +7,15 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import './Profile.css';
 import { useQuery } from '@apollo/client';
+import { QUERY_USER } from '../../utils/queries';
 
-// function Profile() {
-//   // const { data } = useQuery(Query_USER);
-//   let user;
+function Profile() {
+  const { data } = useQuery(QUERY_USER);
+  let user;
 
-//   if(data) {
-//     user = data.user;
-//   }
-
-
-export default function Profile() {
+  if(data) {
+    user = data.user;
+  }
   
 
   return (
@@ -30,7 +28,7 @@ export default function Profile() {
           Programmer Name:
           {/* {user.firstName} {user.lastName} */}
         </Typography>
-        <Typography  color="textSecondary">
+        <Typography  color="textSecondary"> 
           Programmer city here:
           {/* {user.location} */}
         </Typography>
@@ -42,3 +40,4 @@ export default function Profile() {
   );
   }
 
+  export default Profile

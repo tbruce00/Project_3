@@ -19,10 +19,12 @@ const profileSchema = new Schema({
     required: true,
     unique: true,
   },
-  link: {
+  linkedIn: {
+    type: String
+  },
+  gitHub: {
     type: String
   }
-
 
 });
 

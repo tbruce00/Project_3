@@ -11,7 +11,7 @@ function showNavigation() {
         return (
             <ul className="flex-row">
                 <li className="navLinks mx-1">
-                <Link to="/myProfile">
+                <Link to="/myprofile">
                     My Profile
                 </Link>
                 </li>

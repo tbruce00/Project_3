@@ -1,50 +1,53 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import {
-//   ApolloClient,
-//   InMemoryCache,
-//   ApolloProvider,
-//   createHttpLink,
-// } from '@apollo/client';
-// import { setContext } from '@apollo/client/link/context';
-import Profile from './components/Profile/Profile';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 import './App.css';
+import Profile from './components/Profile/Profile';
 import Navbar from './components/Nav/navbar'
 import Jumbotron from './components/Jumbotron/Jumbotron';
+import Login from './components/Login/login';
+import MyProfile from './components/MyProfile/myprofile';
 
-// const httpLink = createHttpLink({
-//   uri: '/graphql',
-// });
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
 
-// const authLink = setContext((_, { headers }) => {
-//   const token = localStorage.getItem('id_token');
-//   return {
-//     headers: {
-//       ...headers,
-//       authorization: token ? `Bearer ${token}` : '',
-//     },
-//   };
-// });
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
 
-// const client = new ApolloClient({
-//   link: authLink.concat(httpLink),
-//   cache: new InMemoryCache(),
-// });
-// 
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
 function App() {
   return (
-    // <ApolloProvider client={client}>
-    // <Router>
+    <ApolloProvider client={client}>
+    <Router>
     <div className="App">
     <Navbar />
       <Jumbotron />
-      <Profile
-      
-
-      />
+    <Switch>
+      <Route exact path = "/" component={Profile} />
+      <Route exact path = "/login" component={Login} />
+      <Route exact path = "/myprofile" component={MyProfile} />
+    </Switch>  
     </div>
-    /* </Router> */
-    // </ApolloProvider>
+    </Router> */
+    </ApolloProvider>
   );
 }
 

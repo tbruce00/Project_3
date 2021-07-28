@@ -14,7 +14,8 @@ const typeDefs = gql`
         bio: String
         location: String
         email: String
-        link: String
+        linkedIn: String
+        gitHub: String
     }
     type Auth {
         token: ID
