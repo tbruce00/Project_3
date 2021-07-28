@@ -20,17 +20,6 @@ db.once('open', async () => {
         lastName: 'Watt',
         email:'stanley@email.com',
         password: '123456'
-<<<<<<< HEAD
-    });
-
-    process.exit();
-
-});
-
-
-
-
-=======
     })
 
     await Comments.create({
@@ -38,4 +27,5 @@ db.once('open', async () => {
         comment: 'Hi I like your profile'
     })
 })
->>>>>>> 0580eb1725870e373882081a85e511395c4a0a98
+
+
