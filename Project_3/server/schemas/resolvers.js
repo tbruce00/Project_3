@@ -24,7 +24,7 @@ const resolvers = {
       
             return { token, user };
           },
-        updateUser: async (parent, args, context) => {
+        updateProfile: async (parent, args, context) => {
             if (context.user) {
             return await User.findByIdAndUpdate(context.user._id, args, { new: true });
             }

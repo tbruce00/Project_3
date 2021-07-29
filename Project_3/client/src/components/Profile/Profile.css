@@ -1,10 +1,17 @@
 .profileContainer {
     width: 200px;
-    
-    
-    
-    background-image: url("../Jumbotron/images/testimg3.jpg");
+      /*Commenting out CSS container card image for now  */
+    /* background-image: url("../Jumbotron/images/testimg3.jpg"); */
     background-position: center;
     padding: 1rem;
-    margin: 1rem;
+    margin: 6rem;
+}
+
+.avatar {
+    height: 140;
+}
+
+.progTitle {
+    padding: 25px;
+    font-size: 15px;
 }

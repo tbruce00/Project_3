@@ -1,6 +1,8 @@
 import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import '../Jumbotron/Jumbotron.css';
+// import { ADD_USER } from '../../utils/mutations';
 
 function SignUp(props) {
     function getUserInfo(token) {
@@ -48,7 +50,7 @@ function SignUp(props) {
         };
     return (
         <form onSubmit={handleSubmit}>
-        <button class="button"> makeProfile<span className="parenthesisColor" >()</span> </button>
+        <button class="button">Create Your Profile Card</button>
         </form>
     )
 }

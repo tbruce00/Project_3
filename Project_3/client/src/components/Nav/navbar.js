@@ -11,12 +11,12 @@ function showNavigation() {
     if (Auth.loggedIn()) {
         return (
             <ul className="flex-row">
-                <li className="navLinks mx-1">
+                <li className="profile-link">
                 <Link to="/myprofile">
                     My Profile
                 </Link>
                 </li>
-                <li className="navLinks mx-1">
+                <li className="navLinks">
                     <a href="/" onClick={() => Auth.logout()}>
                         Logout
                     </a>
@@ -26,7 +26,7 @@ function showNavigation() {
     } else {
         return (
             <ul className="flex-row">
-                <li className="navLinks mx-1">
+                <li className="navLinks">
                     <Link to="/login">
                         Login
                     </Link>
@@ -38,9 +38,9 @@ function showNavigation() {
 
 return (
     <header className="navBar flex-row px-1">
-        <h1>
+        <h1 className="navTitle">
         <Link to="/">
-        <span className="navTitle">[closing brackets]</span>
+        <span>[closing brackets]</span>
         </Link>
         </h1>
         

@@ -1,35 +1,33 @@
 .navBar {
     width: 100%;
-    height: 50px;
-    background: linear-gradient(300deg, #997c99, #a507a5, #993f99);
-    position: fixed;
+    background: linear-gradient(300deg, #2C3531, #116466, #D9B08C, #FFCB9A, #D1E8E2);
     top: 0;
-    z-index: 3;
     transition: all 1s ease;
     display: flex;
     justify-content: space-between;
-    padding: 10px 30px;
 }
 
-.navTitle {
+h1{
+    color:black;
+}
+
+.navLinks {
+    display: flex;
+    font-size: 25px;
+    margin-right: 25px;
+    padding: 10px;
+}
+
+a {
     text-decoration: none;
     font-weight: 500;
+    color: whitesmoke;
 }
 
-h1 {
-    size: 35px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    margin-right: 30px;
-    float: left;
+a:hover {
+    text-decoration: underline;
 }
 
-.navBar .navLinks {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 30px;
-    justify-content: space-between;
-    color: aliceblue;
-}
+
+
+

@@ -21,6 +21,7 @@ export const QUERY_USER = gql`
             lastName
             email
             password
+            
         }
     }
     `;

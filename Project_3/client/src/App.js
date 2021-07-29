@@ -13,6 +13,7 @@ import Navbar from './components/Nav/navbar'
 import Jumbotron from './components/Jumbotron/Jumbotron';
 import Login from './components/Login/login';
 import MyProfile from './components/MyProfile/myprofile';
+import SignUp from './components/SignUp/signup';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,10 +44,11 @@ function App() {
     <Switch>
       <Route exact path = "/" component={Profile} />
       <Route exact path = "/login" component={Login} />
+      <Route exact path = "/signup" component={SignUp} />
       <Route exact path = "/myprofile" component={MyProfile} />
     </Switch>  
     </div>
-    </Router> */
+    </Router> 
     </ApolloProvider>
   );
 }

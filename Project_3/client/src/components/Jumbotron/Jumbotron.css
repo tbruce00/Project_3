@@ -4,11 +4,17 @@
     justify-content: start;
     align-items: flex-start;
     padding: 1rem;
-    background-image: url("./images//background-image-test.jpg");
+    /* background-image: url("./images//background-image-test.jpg"); */
     background-repeat: no-repeat;
     background-size:cover;
     
 }
+h2{
+  color: white;
+  list-style: none;
+  line-height: .25rem;
+}
+
 .jumbotronText {
     color:white;
 }
