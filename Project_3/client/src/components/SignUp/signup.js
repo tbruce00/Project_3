@@ -2,7 +2,9 @@ import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import '../Jumbotron/Jumbotron.css';
-// import { ADD_USER } from '../../utils/mutations';
+import { UPDATE_PROFILE } from '../../utils/mutations';
+import { useMutation } from '@apollo/client';
+
 
 function SignUp(props) {
     function getUserInfo(token) {
@@ -34,17 +36,28 @@ function SignUp(props) {
       });
         });
     }
+    const [addProfile, { error }] = useMutation(UPDATE_PROFILE)
+
     const handleSubmit = async (event) => {
         event.preventDefault();
+
         const provider = new firebase.auth.GithubAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function(result) {
             // This gives you a GitHub Access Token. You can use it to access the GitHub API.
             const token = result.credential.accessToken;
             // requests the user info from github using the access token
             getUserInfo(token).then(function(userInfo) {
-                // TO DO: Replace console.log of userInfo with database write
+
+              try{
+                const { data } = addProfile({
+                  variables: { userInfo }
+                })
+              } catch (error){
+                console.log(error);
+              }
+              // TO DO: Replace console.log of userInfo with database write
                 // access userInfo fields with .name, .email etc.
-                console.log(userInfo);
+                // console.log(userInfo);
             });
           });
         };
