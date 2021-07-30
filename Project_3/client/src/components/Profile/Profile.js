@@ -3,7 +3,6 @@ import React from 'react';
 // import List from '@material-ui/core/List';
 // import ListItem from '@material-ui/core/ListItem';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -11,7 +10,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import './Profile.css';
 import Avatar from '../Profile/images/testimg3.jpg';
-import { DiGithubFull } from "react-icons/di";
+// import { DiGithubFull } from "react-icons/di";
 // import { useQuery } from '@apollo/client';
 // import { QUERY_USER } from '../../utils/queries';
 

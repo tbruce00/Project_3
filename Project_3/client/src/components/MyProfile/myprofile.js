@@ -4,6 +4,7 @@ import Comments from '../Comments/Comments';
 import { MdPlace } from "react-icons/md";
 import { useQuery } from '@apollo/client';
 import { QUERY_PROFILE } from '../../utils/queries';
+import '../MyProfile/myprofile.css';
 
 
 
@@ -18,15 +19,17 @@ function MyProfile() {
   return (
     <div className="container">
       <div className="myProfile">
-        <h1 className="profileHeader">{profile.name}</h1>
+        <h1 className="profileHeader">Trevor Bruce</h1>
         <div>
-          <p className="profileBio">{profile.bio}</p>
+          <p className="profileBio">Freelance Web Developer</p>
         </div>
+        <div className="profileLocation">
         <span>{MdPlace}</span>
-        {profile.location}
+        Denver
+        </div>
       </div>
       <Contact />
-      <Comments />
+      {/* <Comments /> */}
     </div>
   )
 }

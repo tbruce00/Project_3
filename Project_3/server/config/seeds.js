@@ -3,25 +3,39 @@ const { User, Profile, Comments } = require('../models');
 
 db.once('open', async () => {
 
-    const Profile = await Profile.insertMany([
-        { name: 'Ian Preston' },
-        { bio: 'Professional web developer' },
-        { location: 'Denver' },
+    const profile = await Profile.insertMany([
+        { name: 'Ian Preston',
+         bio: 'Professional web developer',
+         location: 'Denver',
+         email: '',
+        linkedIn: '',
+        gitHub: '',
+        user: user[0]._id,
+    },
+        { name: 'Dave Grohl',
+        bio: 'Bootcamp Student',
+        location: 'Miami',
+        email: '',
+        linkedIn: '',
+        gitHub: '',
+        user: user[1]._id,  
+    },
     ]);
 
     await User.create({
-        userName: 'SJOHN316',
-        firstName: 'Steven',
-        lastName: 'John',
+        name: 'Steven Segal',
         email: 'steven@email.com',
-        password: '123456'
-    })
+        bio: 'Bootcamp Student',
+        location: 'Denver',
+        avatarUrl: '',
+    });
+
     await User.create({
-        userName: 'swatt420',
-        firstName: 'Stanley',
-        lastName: 'Watt',
+        name: 'Stanley Tucci',
         email: 'stanley@email.com',
-        password: '123456'
+        bio: 'Freelance Web Developer',
+        location: 'San Francisco',
+        avatarUrl: '',
     })
 
     await Comments.create({

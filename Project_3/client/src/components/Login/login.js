@@ -1,9 +1,10 @@
-import React, { useState }from 'react'
+import React, { useState } from 'react'
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../../utils/mutations';
 import './login.css'
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import Auth from '../../utils/auth';
-
 
 
 function Login(props) {

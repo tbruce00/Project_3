@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react';
-// import '../assets/contact.css'
+import '../Contact/form.css';
 
 
 class Form extends React.Component {

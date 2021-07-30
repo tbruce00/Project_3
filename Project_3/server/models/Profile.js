@@ -24,8 +24,12 @@ const profileSchema = new Schema({
   },
   gitHub: {
     type: String
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
   }
-
 });
 
 const Profile = mongoose.model('Profile', profileSchema);

@@ -1,0 +1,19 @@
+.form {
+    margin: 45px;
+  }
+  
+  .contact-form {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  
+  .form-group {
+    background: black;
+      border-radius: 15px;
+    box-shadow: 10px 5px 5px gray;
+      padding: 12px;
+      max-width: 400px;
+      margin: revert;
+  }
