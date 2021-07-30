@@ -1,6 +1,6 @@
 .navBar {
     width: 100%;
-    background: linear-gradient(300deg, #2C3531, #116466, #D9B08C, #FFCB9A, #D1E8E2);
+    background: rgb(27, 27, 27);
     top: 0;
     transition: all 1s ease;
     display: flex;
@@ -21,7 +21,7 @@ h1{
 a {
     text-decoration: none;
     font-weight: 500;
-    color: whitesmoke;
+    color: #66FCF1;
 }
 
 a:hover {

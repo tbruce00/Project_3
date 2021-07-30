@@ -1,8 +1,8 @@
 .profileContainer {
     width: 200px;
       /*Commenting out CSS container card image for now  */
-    /* background-image: url("../Jumbotron/images/testimg3.jpg"); */
-    background-position: center;
+    background-image: url("images/test-card-image.png");
+    background-size:cover ;
     padding: 1rem;
     margin: 6rem;
 }
@@ -14,4 +14,8 @@
 .progTitle {
     padding: 25px;
     font-size: 15px;
+    color:#66FCF1;
+}
+.progLoc {
+    color:#66FCF1;
 }
