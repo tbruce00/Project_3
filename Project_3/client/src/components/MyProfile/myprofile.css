@@ -1,18 +1,15 @@
-.myProfile {
-
+/* #66FCF1 */
+.container {
+    
+    color: #66FCF1;
 }
-
 .profileHeader {
-
+    color: #66FCF1;
 }
-
-.profileBio {
-
+.myProfile {
+    background-color: rgb(36, 35, 35);
+    margin: auto;
+    padding: .5rem;
+    font-family: "Consolas";
+    border-radius: 4px;
 }
-
-.profileLocation {
-
-}
-
-
-

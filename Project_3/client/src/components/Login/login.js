@@ -33,10 +33,10 @@ function Login(props) {
     };
 
     return (
-        <div className="container my-1">
-            <h2>Login</h2>
+        <div className= "form-style-5">
+            <h1>Login</h1>
             <form onSubmit={handleFormSubmit}>
-                <div className="flex-row space-between my-2">
+                <div className="">
                     <label className="label" htmlFor="username">GitHub Username: </label>
                     <input
                         placeholder="GitHub Username..."
@@ -46,7 +46,7 @@ function Login(props) {
                         onChange={handleChange}
                     />
                 </div>
-                <div className="flex-row space-between my-2">
+                <div className="">
                     <label className="label" htmlFor="pwd">GitHub Password: </label>
                     <input
                         placeholder=""

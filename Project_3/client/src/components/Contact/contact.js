@@ -10,10 +10,9 @@ import { GrGithub } from 'react-icons/gr';
 export default function Contact() {
     return (
         <div className="container">
-            <div className="row align-items-start">
-            <div className="col">
-                <h1 className="text-center">Contact Me</h1>
-                <Form style={{ width: '25rem' }} />
+            <div className="mx-auto mt-auto p-auto">
+                
+                <Form />
                 <br />
             </div>
             <div className="row align-items-end">
@@ -31,6 +30,5 @@ export default function Contact() {
                 </div>
             </div>
             </div>
-        </div>
     );
 }

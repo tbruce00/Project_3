@@ -42,7 +42,7 @@ export const UPDATE_PROFILE = gql`
         $bio: String!
         $location: String!
         $email: String!
-        $linkedIn: String!
+        $avatarUrl: String!
         $gitHub: String!
     ) {
         updateProfile(
@@ -50,7 +50,7 @@ export const UPDATE_PROFILE = gql`
             bio: $bio
             location: $location
             email: $email
-            linkedIn: $linkedIn
+            avatarUrl: $avatarUrl
             gitHub: $gitHub
         ){
             token
