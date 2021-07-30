@@ -37,7 +37,7 @@ function Login(props) {
             <h2>Login</h2>
             <form onSubmit={handleFormSubmit}>
                 <div className="flex-row space-between my-2">
-                    <label htmlFor="username">GitHub Username:</label>
+                    <label className="label" htmlFor="username">GitHub Username: </label>
                     <input
                         placeholder="GitHub Username..."
                         name="username"
@@ -47,7 +47,7 @@ function Login(props) {
                     />
                 </div>
                 <div className="flex-row space-between my-2">
-                    <label htmlFor="pwd">GitHub Password</label>
+                    <label className="label" htmlFor="pwd">GitHub Password: </label>
                     <input
                         placeholder=""
                         name="password"

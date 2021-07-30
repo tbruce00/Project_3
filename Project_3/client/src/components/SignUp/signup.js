@@ -2,6 +2,7 @@ import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import '../Jumbotron/Jumbotron.css';
+import './SignUp.css';
 // import { ADD_USER } from '../../utils/mutations';
 
 function SignUp(props) {

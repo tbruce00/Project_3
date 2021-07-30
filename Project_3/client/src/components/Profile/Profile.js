@@ -40,11 +40,11 @@ function Profile() {
           image={Avatar}
           title="Profile Picture"
         />
-        <Typography className="progTitle" variant="h5" component="h2" color="textPrimary">
+        <Typography className="progTitle" variant="h5" component="h2" >
           Programmer Name:
           {/* {user.firstName} {user.lastName} */}
         </Typography>
-        <Typography  color="textPrimary"> 
+        <Typography  className="progLoc" > 
           Programmer Location:
           {/* {user.location} */}
         </Typography>
