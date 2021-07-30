@@ -1,6 +1,6 @@
 import React from "react";
 import './Jumbotron.css';
-import codeSnippet from './images/codesnippetscreenshot.png'
+
 import SignUp from '../SignUp/signup';
 import Loop from '../Jumbotron/video/backgroundvideo.mp4';
 
@@ -15,8 +15,8 @@ const Jumbotron = () => {
         left: "50%",
         top: "50%",
         height: "100%",
-        objectFit: "cover",
-        transform: "translate(-50%, -95%)",
+        objectFit: "fill",
+        transform: "translate(-50%, -113%)",
         zIndex: "-1"
       }}
       >

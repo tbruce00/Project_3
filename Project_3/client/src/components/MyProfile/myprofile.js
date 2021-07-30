@@ -1,34 +1,32 @@
 import React from 'react';
 import Contact from '../Contact/contact';
 import Comments from '../Comments/Comments';
-import { MdPlace } from "react-icons/md";
+import { MdPlace } from 'react-icons/md';
 import { useQuery } from '@apollo/client';
 import { QUERY_PROFILE } from '../../utils/queries';
-
-
+import '../MyProfile/myprofile.css';
 
 function MyProfile() {
   const { data } = useQuery(QUERY_PROFILE);
   let profile;
-
   if (data) {
     profile = data.profile;
   }
-
   return (
-    <div className="container">
-      <div className="myProfile">
-        <h1 className="profileHeader">{profile.name}</h1>
+    <div className='container'>
+      <div className='myProfile'>
+        <h1 className='profileHeader'>Trevor Bruce</h1>
         <div>
-          <p className="profileBio">{profile.bio}</p>
+          <p className='profileBio'>Freelance Web Developer</p>
         </div>
+        <div className='profileLocation'>
         <span>{MdPlace}</span>
-        {profile.location}
+        Denver
+        </div>
       </div>
       <Contact />
-      <Comments />
+      {/* <Comments /> */}
     </div>
   )
 }
-
 export default MyProfile;

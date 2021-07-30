@@ -7,7 +7,7 @@ export default function Contact() {
     return (
         <div className="container">
             <div className="mx-auto mt-auto p-auto">
-                <h1 className="text-center">Contact Me</h1>
+                
                 <Form />
                 <br />
             </div>

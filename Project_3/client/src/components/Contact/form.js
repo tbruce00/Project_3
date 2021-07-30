@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 // import '../assets/contact.css'
+import './form.css'
 
 
 class Form extends React.Component {
@@ -34,6 +35,8 @@ class Form extends React.Component {
 
     render() {
         return (
+            <div className="form-style-6">
+            <h1>Contact Me</h1>
             <form className="contactForm" id="contact-form" onSubmit={this.handleSubmit.bind((this))} method="POST">
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
@@ -49,6 +52,7 @@ class Form extends React.Component {
                 </div>
                 <button type="submit" className="btn btn-dark">Submit</button>    
             </form>
+            </div>
         );
     }
     onNameChange(event) {

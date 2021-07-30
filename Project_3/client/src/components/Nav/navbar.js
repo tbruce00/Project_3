@@ -26,6 +26,11 @@ function showNavigation() {
     } else {
         return (
             <ul className="flex-row">
+                <li className='navLinks'>
+                    <Link to='/myprofile'>
+                        My Profile
+                    </Link>
+                </li>
                 <li className="navLinks">
                     <Link to="/login">
                         Login
