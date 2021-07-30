@@ -9,7 +9,6 @@ const typeDefs = gql`
         email: String
         password: String
         profile: Profile
-        comments: Comment
 }
     type Profile {
         _id: ID
@@ -19,11 +18,6 @@ const typeDefs = gql`
         email: String
         linkedIn: String
         gitHub: String
-    }
-    type Comments {
-        _id: ID
-        name: String
-        comment: String
     }
     type Auth {
         token: ID
@@ -39,7 +33,6 @@ const typeDefs = gql`
         addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
         updateProfile(name: String, bio: String, location: String, email: String, linkedIn: String, gitHub: String): User
-        addComment(name: String, comment: String): User 
     }
 `;
 

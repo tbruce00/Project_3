@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { User, Profile, Comments } = require('../models');
+const { User, Profile} = require('../models');
 
 db.once('open', async () => {
 
@@ -24,10 +24,6 @@ db.once('open', async () => {
         password: '123456'
     })
 
-    await Comments.create({
-        name: 'Zach',
-        comment: 'Hi I like your profile'
-    })
 })
 
 

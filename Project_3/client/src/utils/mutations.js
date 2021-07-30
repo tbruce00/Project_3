@@ -59,21 +59,5 @@ export const UPDATE_PROFILE = gql`
     }
 `;
 
-export const ADD_COMMENT = gql`
-    mutation addComment(
-        $name: String!
-        $comment: String!
-    ){
-        addComment(
-            name: $name
-            comment: $comment
-        ){
-            token
-            user {
-                _id
-            }
-        }
-    }    
-    `;
 
         

@@ -1,6 +1,5 @@
 import React from 'react';
 import Contact from '../Contact/contact';
-import Comments from '../Comments/Comments';
 import { MdPlace } from "react-icons/md";
 import { useQuery } from '@apollo/client';
 import { QUERY_PROFILE } from '../../utils/queries';
@@ -26,7 +25,6 @@ function MyProfile() {
         {profile.location}
       </div>
       <Contact />
-      <Comments />
     </div>
   )
 }
