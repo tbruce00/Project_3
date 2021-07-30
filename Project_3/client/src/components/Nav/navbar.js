@@ -11,7 +11,7 @@ function showNavigation() {
     if (Auth.loggedIn()) {
         return (
             <ul className="flex-row">
-                <li className="profile-link">
+                <li className="profileLink">
                 <Link to="/myprofile">
                     My Profile
                 </Link>

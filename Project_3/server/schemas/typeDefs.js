@@ -10,7 +10,6 @@ const typeDefs = gql`
         avatarUrl: String
         websiteUrl: String
         profile: Profile
-        comments: Comment
 }
     type Profile {
         _id: ID
@@ -20,11 +19,6 @@ const typeDefs = gql`
         email: String
         linkedIn: String
         gitHub: String
-    }
-    type Comments {
-        _id: ID
-        name: String
-        comment: String
     }
     type Auth {
         token: ID
@@ -38,7 +32,6 @@ const typeDefs = gql`
     
     type Mutation {
         updateProfile(name: String, bio: String, location: String, email: String, linkedIn: String, gitHub: String): User
-        addComment(name: String, comment: String): User 
     }
 `;
 

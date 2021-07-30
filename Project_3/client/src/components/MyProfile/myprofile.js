@@ -29,7 +29,6 @@ function MyProfile() {
         </div>
       </div>
       <Contact />
-      {/* <Comments /> */}
     </div>
   )
 }
