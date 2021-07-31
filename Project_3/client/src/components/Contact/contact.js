@@ -7,7 +7,14 @@ import { GrGithub } from 'react-icons/gr';
 
 
 
-export default function Contact() {
+function Contact() {
+
+    const { data } = useQuery(QUERY_PROFILE);
+    let profile;
+    if (data) {
+      profile = data.profile;
+    }
+
     return (
         <div className="container">
             <div className="mx-auto mt-auto p-auto">
@@ -34,3 +41,6 @@ export default function Contact() {
             </div>
     );
 }
+
+export default Contact;
+
