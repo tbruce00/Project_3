@@ -1,4 +1,28 @@
-.container {
-    margin: auto;
+.profLinks {
+    margin: 0;
+    background: black;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
+.profLinks h2 {
+    color: #66FCF1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 140%;
+}
+
+.iconContainer {
+    display: inline-flex;
+}
+
+.profIcons {
+    display: flex;
+    font-size: 190%;
+    padding-inline: 10px;
+}
+
+.profIcons::hover {
+    border-radius: 5px;
+    border-style: solid;
+    border:black;
+}

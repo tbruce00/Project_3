@@ -13,6 +13,7 @@
 	text-align: center;
 	color: #66FCF1;
 	margin: -16px -16px 16px -16px;
+    font-family: 'Montserrat', sans-serif;
 }
 .form-style-6 input[type="text"],
 .form-style-6input[type="date"],
@@ -65,7 +66,7 @@
 	width: 100%;
 	padding: 3%;
 	background: black;
-	
+	font-family: 'Workman Sans', sans-serif;
 	border-top-style: none;
 	border-right-style: none;
 	border-left-style: none;	
@@ -74,4 +75,6 @@
 .form-style-6 button[type="submit"]:hover,
 .form-style-6 button[type="button"]:hover{
 	background: #66FCF1;
+    color:#474747;
+    cursor: pointer;
 }

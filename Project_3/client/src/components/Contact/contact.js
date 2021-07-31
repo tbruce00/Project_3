@@ -11,23 +11,25 @@ export default function Contact() {
     return (
         <div className="container">
             <div className="mx-auto mt-auto p-auto">
-                
+                <div className="flex-row">
                 <Form />
                 <br />
-            </div>
-            <div className="row align-items-end">
-                <div className="col">
+                <div className="profLinks col">
                     <br />
                     <h2>Links</h2>
                     <br />
-                    <a className="footerIcons" href="" target="_blank">
+                    </div>
+                    <br />
+                    <div className="iconContainer">
+                    <a className="profIcons" href="" target="_blank">
                     <GrLinkedinOption />
                     </a>
                     <br />
-                    <a className="footerIcons" href="" target="_blank">
+                    <a className="profIcons" href="" target="_blank">
                     <GrGithub />
                     </a>
-                </div>
+                    </div>
+            </div>    
             </div>
             </div>
     );

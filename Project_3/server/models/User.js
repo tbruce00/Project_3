@@ -30,8 +30,7 @@ const userSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Profile',
     required: true
-  },
-  comments: [Comment.schema]
+  }
 });
 
 // // Set up pre-save middleware to create password

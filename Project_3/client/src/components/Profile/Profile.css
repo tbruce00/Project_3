@@ -6,16 +6,32 @@
     padding: 1rem;
     margin: 6rem;
 }
-
+.profImage {
+    border-radius: 15px;
+    border-style:double;
+    border-color: #66FCF1;
+}
 .avatar {
     height: 140;
+    max-width: 100px;
 }
 
 .progTitle {
     padding: 25px;
-    font-size: 15px;
+    font-size: 10px;
     color:#66FCF1;
+    font-family: 'Cardo', serif;
 }
 .progLoc {
     color:#66FCF1;
+    font-size: 10px;
+    font-family: 'Cardo', serif;
+}
+
+.portLink {
+    color: #66FCF1;
+    text-align: center;
+    padding: auto;
+    margin: auto;
+    border-radius: 5px;
 }

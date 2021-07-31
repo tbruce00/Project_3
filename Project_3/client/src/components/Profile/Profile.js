@@ -34,13 +34,14 @@ function Profile() {
       <Button>
       <CardContent>
       <CardMedia
+          className= "profImage"
           component="img"
           alt="Profile Picture"
           height="140"
           image={Avatar}
           title="Profile Picture"
         />
-        <Typography className="progTitle" variant="h5" component="h2" >
+        <Typography className="progTitle">
           Programmer Name:
           {/* {user.firstName} {user.lastName} */}
         </Typography>
@@ -49,9 +50,13 @@ function Profile() {
           {/* {user.location} */}
         </Typography>
       </CardContent>
-      
         </Button>
       </CardActions>
+      {/* <CardActions className="portLink">
+        <Button>
+          Portfolio Link
+        </Button>
+      </CardActions> */}
     </Card>
   );
   }

@@ -17,13 +17,13 @@ const Jumbotron = () => {
         height: "100%",
         objectFit: "fill",
         transform: "translate(-50%, -113%)",
-        zIndex: "-1"
+        zIndex: "-1",
       }}
       >
         <source src={Loop} type="video/mp4" />
       </video>
     <div className="container">
-      <h2>A Place For Freelance Web Devs.</h2>
+      <h2>A Place For Freelance Web Developers.</h2>
       {/* <img src={codeSnippet} /> */}
       <p className="jumbotronText">
       Browse Web Dev Portfolios Below or Create Your Own.

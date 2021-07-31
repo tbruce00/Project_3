@@ -17,11 +17,12 @@ export const QUERY_PROFILE = gql`
 export const QUERY_USER = gql`
     {
         user {
-            firstName
-            lastName
+            name
             email
-            password
-            
+            bio
+            location
+            avatarUrl
+            websiteUrl
         }
     }
     `;

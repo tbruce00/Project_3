@@ -12,11 +12,6 @@ const typeDefs = gql`
         profile: Profile
 }
     type Profile {
-        _id: ID
-        name: String
-        bio: String
-        location: String
-        email: String
         linkedIn: String
         gitHub: String
     }

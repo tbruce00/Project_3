@@ -13,21 +13,24 @@ h2{
   color: white;
   list-style: none;
   line-height: .25rem;
+  font-family: 'Cardo', serif;
+  letter-spacing: .1rem;
 }
 
 .jumbotronText {
     color:white;
+    font-size: large;
 }
+
 .jumbotronCodeText {
   color:white;
 }
 .button {
-  font-family: "Consolas";
+    font-family: 'Montserrat', sans-serif;
     display: inline-block;
     border-radius: 4px;
-    background-color: rgb(36, 35, 35);
+    background: linear-gradient(45deg, #66FCF1, #45A29E);
     border: none;
-    
     text-align: center;
     font-size: 15px;
     padding: 20px;
@@ -35,6 +38,7 @@ h2{
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+    color: #0B0C10;
   }
   .parenthesisColor {
     color: rgb(189, 90, 189);
