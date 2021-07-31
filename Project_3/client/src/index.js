@@ -5,6 +5,7 @@ import App from './App';
 import firebase from "firebase/app";
 import LoadingIndicator from './components/loader/loader';
 
+// Firebase api keys don't need protected => https://stackoverflow.com/questions/37482366/is-it-safe-to-expose-firebase-apikey-to-the-public
 var firebaseConfig = {
   apiKey: "AIzaSyDCB3ihfMJNCTgJmckzug6TxAKQyvs5Wwg",
   authDomain: "project-3-930bb.firebaseapp.com",
