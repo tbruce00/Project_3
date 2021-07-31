@@ -2,8 +2,8 @@ import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import '../Jumbotron/Jumbotron.css';
-import { ADD_USER } from '../../utils/mutations';
-import { useMutation } from '@apollo/client';
+//import { ADD_USER } from '../../utils/mutations';
+//import { useMutation } from '@apollo/client';
 // import auth from '../../utils/auth';
 
 
