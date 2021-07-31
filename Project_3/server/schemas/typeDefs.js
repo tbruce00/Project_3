@@ -9,16 +9,10 @@ const typeDefs = gql`
         email: String
         password: String
         profile: Profile
-}
-    type Profile {
-        _id: ID
-        name: String
-        bio: String
-        location: String
-        email: String
-        linkedIn: String
-        gitHub: String
     }
+        type Profile {
+            name: String
+          }
     type Auth {
         token: ID
         user: User

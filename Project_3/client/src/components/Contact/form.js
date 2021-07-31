@@ -11,7 +11,6 @@ class Form extends React.Component {
             email: '',
             message: ''
         };
-
     }
     handleSubmit(e) {
         e.preventDefault();

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import firebase from "firebase/app";
+import LoadingIndicator from './components/loader/loader';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDCB3ihfMJNCTgJmckzug6TxAKQyvs5Wwg",
@@ -19,6 +20,7 @@ var firebaseConfig = {
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <LoadingIndicator/>
   </React.StrictMode>,
   document.getElementById('root')
 );
