@@ -38,19 +38,11 @@ export const ADD_USER = gql`
 
 export const UPDATE_PROFILE = gql`
     mutation updateProfile(
-        $name:String!
-        $bio: String!
-        $location: String!
-        $email: String!
-        $avatarUrl: String!
+        $linkedIn: String!
         $gitHub: String!
     ) {
         updateProfile(
-            name: $userName
-            bio: $bio
-            location: $location
-            email: $email
-            avatarUrl: $avatarUrl
+            linkedIn: $linkedIn
             gitHub: $gitHub
         ){
             token
@@ -61,21 +53,21 @@ export const UPDATE_PROFILE = gql`
     }
 `;
 
-export const ADD_COMMENT = gql`
-    mutation addComment(
-        $name: String!
-        $comment: String!
-    ){
-        addComment(
-            name: $name
-            comment: $comment
-        ){
-            token
-            user {
-                _id
-            }
-        }
-    }    
-    `;
+// export const ADD_COMMENT = gql`
+//     mutation addComment(
+//         $name: String!
+//         $comment: String!
+//     ){
+//         addComment(
+//             name: $name
+//             comment: $comment
+//         ){
+//             token
+//             user {
+//                 _id
+//             }
+//         }
+//     }    
+//     `;
 
         

@@ -75,3 +75,7 @@
 .form-style-5 button[type="button"]:hover{
 	background: #66FCF1;
 }
+
+.login {
+    color: white;
+}

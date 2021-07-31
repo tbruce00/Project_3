@@ -31,11 +31,6 @@ function showNavigation() {
                         My Profile
                     </Link>
                 </li>
-                <li className="navLinks">
-                    <Link to="/login">
-                        Login
-                    </Link>
-                </li>
             </ul>
         );
     }

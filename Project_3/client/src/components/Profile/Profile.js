@@ -2,6 +2,7 @@ import React from 'react';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Card from '@material-ui/core/Card';
+import { Link } from "react-router-dom";
 //import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
@@ -13,8 +14,8 @@ import './Profile.css';
 //import { DiGithubFull } from "react-icons/di";
 import firebase from 'firebase/app';
 import 'firebase/firestore';
-//import { trackPromise } from 'react-promise-tracker';
-//import { render } from 'react-dom';
+// import { trackPromise } from 'react-promise-tracker';
+// import { render } from 'react-dom';
 import { useState } from 'react';
 // import { useQuery } from '@apollo/client';
 // import { QUERY_USER } from '../../utils/queries';
@@ -42,20 +43,17 @@ const Fetchdata = ()=>{
         });
     })
 }
-
-
-
-
     return (
-    <List>
+      <List className="profList">
       {info.map((data) => (
-    <ListItem alignItems="flex-start">
+    <ListItem className="profiles">
     <Card className="profileContainer" variant="outlined">
       <CardActions>
+      <Link to="/myprofile/">
       <Button>
       <CardContent>
-
       <CardMedia
+          className="profImage"
           component="img"
           alt="Profile Picture"
           height="140"
@@ -69,14 +67,14 @@ const Fetchdata = ()=>{
           {data.location}
         </Typography>
       </CardContent>
-      
         </Button>
+        </Link>
       </CardActions>
     </Card>
     </ListItem>
       ))}
   </List>
   )
-
 }
+
 export default Profile

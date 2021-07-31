@@ -1,17 +1,13 @@
 import React from 'react';
 import Contact from '../Contact/contact';
 import { MdPlace } from 'react-icons/md';
-import { useQuery } from '@apollo/client';
-import { QUERY_PROFILE } from '../../utils/queries';
 import '../MyProfile/myprofile.css';
 import ProfPic from './images/profpic.JPG';
+// import firebase from 'firebase/app';
+// import 'firebase/firestore';
 
 function MyProfile() {
-  const { data } = useQuery(QUERY_PROFILE);
-  let profile;
-  if (data) {
-    profile = data.profile;
-  }
+
   return (
     <div className='container'>
       <div className='myProfile'>
@@ -22,7 +18,7 @@ function MyProfile() {
         </div>
         <div className='profileLocation'>
         <MdPlace className="icon"/>
-        Denver
+        Denver, CO
         </div>
       </div>
       <Contact />
@@ -30,4 +26,5 @@ function MyProfile() {
     </div>
   )
 }
+
 export default MyProfile;

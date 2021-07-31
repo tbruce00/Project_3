@@ -1,15 +1,24 @@
+.profList{
+    display: inline-flex;
+    justify-content: space-between;
+    max-height: 500px;
+}
+.profiles{
+    display: flex;
+
+}
 .profileContainer {
     width: 200px;
-      /*Commenting out CSS container card image for now  */
     background-image: url("images/test-card-image.png");
     background-size:cover ;
-    padding: 1rem;
-    margin: 6rem;
+    padding: 1.5rem;
+    margin: 5rem;
 }
 .profImage {
     border-radius: 15px;
     border-style:double;
     border-color: #66FCF1;
+    max-width: 150px;
 }
 .avatar {
     height: 140;
@@ -17,7 +26,7 @@
 }
 
 .progTitle {
-    padding: 25px;
+    padding: 5px;
     font-size: 10px;
     color:#66FCF1;
     font-family: 'Cardo', serif;

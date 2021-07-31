@@ -36,7 +36,7 @@ function Login(props) {
         <div className= "form-style-5">
             <h1>Login</h1>
             <form onSubmit={handleFormSubmit}>
-                <div className="">
+                <div className="login">
                     <label className="label" htmlFor="username">GitHub Username: </label>
                     <input
                         placeholder="GitHub Username..."
@@ -46,7 +46,7 @@ function Login(props) {
                         onChange={handleChange}
                     />
                 </div>
-                <div className="">
+                <div className="login">
                     <label className="label" htmlFor="pwd">GitHub Password: </label>
                     <input
                         placeholder=""

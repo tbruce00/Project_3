@@ -3,10 +3,6 @@ import { gql } from '@apollo/client';
 export const QUERY_PROFILE = gql`
     {
         profile {
-            name
-            bio
-            location
-            email 
             linkedIn 
             gitHub
         }
