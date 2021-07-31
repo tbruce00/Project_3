@@ -2,12 +2,16 @@ import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import '../Jumbotron/Jumbotron.css';
-import { UPDATE_PROFILE } from '../../utils/mutations';
-import { useMutation } from '@apollo/client';
+//import { ADD_USER } from '../../utils/mutations';
+//import { useMutation } from '@apollo/client';
+// import auth from '../../utils/auth';
+
 
 
 function SignUp(props) {
-    function getUserInfo(token) {
+    function getUserInfo(token, uid) {
+      var db = firebase.firestore();
+      var userRef = db.collection("users");
         // get the user info the the github graphql api
         var url = "https://api.github.com/graphql";
         var headers = {
@@ -21,46 +25,37 @@ function SignUp(props) {
           })
         };
         return fetch(url, options).then(function(response) {
-            // creates a current user object to retrieve user ID from firebase.
-            const user = firebase.auth().currentUser;
             return response.json().then(function(json) {
-                return {
-                    _id: user.uid,
-                    name: json.data.viewer.name,
-                    email: json.data.viewer.email,
-                    bio: json.data.viewer.bio,
-                    location: json.data.viewer.location,
-                    avatarUrl: json.data.viewer.avatarUrl,
-                    websiteUrl: json.data.viewer.websiteUrl
-                };
-      });
-        });
-    }
-    const [addProfile, { error }] = useMutation(UPDATE_PROFILE)
 
+              userRef.doc(uid).set({
+                name: json.data.viewer.name,
+                email: json.data.viewer.email,
+                bio: json.data.viewer.bio,
+                location: json.data.viewer.location,
+                avatarUrl: json.data.viewer.avatarUrl,
+                websiteUrl: json.data.viewer.websiteUrl
+              });
+                  // name: json.data.viewer.name,
+                  // email: json.data.viewer.email,
+                  // bio: json.data.viewer.bio,
+                  // location: json.data.viewer.location,
+                  // avatarUrl: json.data.viewer.avatarUrl,
+                  // websiteUrl: json.data.viewer.websiteUrl
+        });
+      });
+    }
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         const provider = new firebase.auth.GithubAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function(result) {
-            // This gives you a GitHub Access Token. You can use it to access the GitHub API.
-            const token = result.credential.accessToken;
-            // requests the user info from github using the access token
-            getUserInfo(token).then(function(userInfo) {
-
-              try{
-                const { data } = addProfile({
-                  variables: { userInfo }
-                })
-              } catch (error){
-                console.log(error);
-              }
-              // TO DO: Replace console.log of userInfo with database write
-                // access userInfo fields with .name, .email etc.
-                // console.log(userInfo);
-            });
-          });
-        };
+          const token = result.credential.accessToken;
+          const user = firebase.auth().currentUser;
+          getUserInfo(token, user.uid).then(function(user) {
+            
+          })
+        })
+      };
     return (
         <form onSubmit={handleSubmit}>
         <button class="button">Create Your Profile Card</button>
